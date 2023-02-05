@@ -9,21 +9,3 @@ inputText.addEventListener('blur', event => {
     return inputText.classList.add('invalid')
 });
 
-// inputText.addEventListener('input', onEnterText);
-
-
-// inputBorder.addEventListener('focus', onInputFocus);
-
-// inputBorder.addEventListener('blur', onInputBlur); 
-
-// function onEnterText(input) { 
-// if (inputText )
-// };
-
-// function onInputFocus() {
-
-// };
-
-// function onInputBlur() { 
-
-// };

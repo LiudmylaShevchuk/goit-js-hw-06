@@ -14,29 +14,16 @@ const images = [
 ];
 
 const galleryList = document.querySelector(".gallery");
-// galleryList.classList.add('galery_item');
-const galleryItems = images
 
-  .map((image) => 
+
+const makeGallery = ({ url, alt }) => {
+  return `<li class="gallery_item"><img src="${url}" alt="${alt}" width="320"></li>`
+
+};
+
+const makeList = images.map(makeGallery).join(""); 
  
-'<li class="galery_item"><img src="${url}" alt="${alt}" width="320"></li>')
+galleryList.insertAdjacentHTML("beforeend", makeList);
 
-  .join("") 
- 
-// const listItems = images.map(markup).join("");
+galleryList.style.backgroundColor = tomato;
 
-// const listItem = document.createElement('img');
-//   listItem.src = url;
-//   listItem.alt = alt;
-//   listItem.width = '320';
-  
-  // return listItem;
-  // '<li class="galery_item"><img src="${url}" alt="${alt}" width="320"></li>'
-// };
-    
-// const items = markup(images);
-
-// for (let item of items) {
-//   console.log(item);
-  galleryList.insertAdjacentHTML("beforeend", galleryItems);
-// }
