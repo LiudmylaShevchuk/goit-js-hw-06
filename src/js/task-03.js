@@ -25,5 +25,4 @@ const makeList = images.map(makeGallery).join("");
  
 galleryList.insertAdjacentHTML("beforeend", makeList);
 
-galleryList.style.backgroundColor = tomato;
 
