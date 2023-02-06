@@ -13,16 +13,12 @@ const images = [
   },
 ];
 
-const galleryList = document.querySelector(".gallery");
+const galleryList = document.querySelector('.gallery');
 
-
-const makeGallery = ({ url, alt }) => {
-  return `<li class="gallery_item"><img src="${url}" alt="${alt}" width="320"></li>`
-
+const makeGalleryListItem = ({ url, alt }) => {
+  return `<li class="gallery_item"><img src="${url}" alt="${alt}" width="320"></li>`;
 };
 
-const makeList = images.map(makeGallery).join(""); 
- 
-galleryList.insertAdjacentHTML("beforeend", makeList);
+const murkup = images.map(makeGalleryListItem).join('');
 
-
+galleryList.insertAdjacentHTML('beforeend', murkup);

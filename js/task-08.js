@@ -1,6 +1,6 @@
 const form = document.querySelector('.login-form');
 
-const loginFormSubmitHeandler = (event) => {
+const loginFormSubmitHeandler = event => {
     event.preventDefault();
     const email = event.currentTarget.elements.email.value;
     const password = event.currentTarget.elements.password.value;
@@ -8,8 +8,8 @@ const loginFormSubmitHeandler = (event) => {
         email,
         password,
     };
-    email === "" || password === ""
-        ? alert("Всі поля повинні бути заповнені")
+    email === '' || password === ''
+        ? alert('Всі поля повинні бути заповнені')
         : console.log(formData);
     event.currentTarget.reset();
 };
